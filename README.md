@@ -56,27 +56,52 @@ Stores core account information for registered customers.
 | `is_active`, `is_deleted` | | Account status flags |
 | `created_at`, `updated_at` | | Tracking timestamps |
 
-### SESSIONS
+#  SESSIONS
 Tracks user or guest browsing activity and marketing attribution.
-- **Relationship**: `USERS (0,N) ───── (1,1) SESSIONS`
+
+**Relationship:** `USERS (0,N) ─── (1,1) SESSIONS`
+
 | Attribute | Type | Description |
 |-----------|------|-------------|
 | `session_id` | PK | Unique session identifier |
 | `user_id` | FK | Links to registered user (NULL if guest) |
 | `guest_id` | | Anonymous identifier |
-| `start_time`, `end_time` | | Session duration |
-| `device_type`, `user_agent` | | Device fingerprinting |
-| `source`, `campaign`, `referrer_url` | | Marketing attribution |
-| `ip_address` | | Network identifier |
+| `start_time` | | Session start timestamp |
+| `end_time` | | Session end timestamp |
+| `device_type` | | e.g., mobile, desktop, tablet |
+| `user_agent` | | Browser/device fingerprint |
+| `source` | | Traffic source (e.g., google, direct) |
+| `campaign` | | Marketing campaign identifier |
+| `referrer_url` | | Previous page URL |
+| `ip_address` | | Network address |
+| `created_at` | | Record creation timestamp |
 
-### CART_SESSIONS & CART_ITEMS
+---
+
+# 🛒 CART_SESSIONS & CART_ITEMS
 Models the shopping cart lifecycle and abandonment tracking.
-- **Relationship**: `SESSIONS (1,1) ───── (0,1) CART_SESSIONS`
-- **Relationship**: `CART_SESSIONS (1,1) ───── (1,N) CART_ITEMS`
-| Table | Key Attributes | Purpose |
-|-------|----------------|---------|
-| **CART_SESSIONS** | `cart_id`, `session_id`, `is_abandoned` | Container for cart state |
-| **CART_ITEMS** | `cart_item_id`, `product_id`, `quantity`, `added_at` | Line items within cart |
+
+**Relationships:**
+- `SESSIONS (1,1) ─── (0,1) CART_SESSIONS`
+- `CART_SESSIONS (1,1) ─── (1,N) CART_ITEMS`
+
+## CART_SESSIONS
+| Attribute | Type | Description |
+|-----------|------|-------------|
+| `cart_id` | PK | Unique cart identifier |
+| `session_id` | FK | Associated browsing session |
+| `user_id` | FK | Cart owner (if logged in) |
+| `is_abandoned` | | Boolean flag for abandonment tracking |
+| `created_at` | | Cart creation timestamp |
+
+## CART_ITEMS
+| Attribute | Type | Description |
+|-----------|------|-------------|
+| `cart_item_id` | PK | Unique line item identifier |
+| `cart_id` | FK | Parent cart reference |
+| `product_id` | FK | Product added to cart |
+| `quantity` | | Number of units |
+| `added_at` | | Timestamp when item was added |
 
 ### TRANSACTIONS
 Records completed purchases and shipping details.
