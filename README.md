@@ -332,7 +332,7 @@ Displays complete product information, including images, description, pricing, r
 ### Checkout Page
 Allows users to review their order before completing the purchase. The page displays the selected products, quantities, total price, shipping address, and payment method. After confirming the payment, the system processes the order, updates the inventory in real time, records the transaction, and displays a successful order confirmation.
 
-![Checkout Page](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/eight.png)
+![Checkout Page](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/eigth.png)
 
 ### User Profile Page
 Provides a centralized dashboard for managing personal account information and shopping activities. Users can view their profile details, manage shipping addresses, maintain a wishlist, and track order history and delivery status. The page also allows users to add new addresses, set default shipping locations, and monitor previous purchases from a single interface.
