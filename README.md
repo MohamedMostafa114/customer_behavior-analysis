@@ -175,3 +175,91 @@ Geographic reference data for addresses and regional analysis.
 - **Timestamps**: `created_at` and `updated_at` default to `CURRENT_TIMESTAMP`.
 - **Integrity**: Referential integrity is strictly enforced via **Foreign Key Constraints**. Business logic (e.g., updating `stock_quantity` on purchase) is handled via **Database Triggers**.
 - **Derived Attributes**: Fields like `avg_rating` in `PRODUCTS` are calculated based on inserts/updates to the `REVIEWS` table.
+
+### Customer Behavior Analytics E-Commerce Platform
+
+A production-ready e-commerce platform designed to analyze customer behavior through real-time event processing, advanced analytics, and AI-powered product recommendations. The platform combines a complete online shopping experience with a scalable data analytics architecture to provide personalized recommendations and business insights.
+
+#### Features
+Secure user authentication (Sign Up, Login, Logout)
+Product catalog with detailed product pages
+Shopping cart and checkout system
+Wishlist functionality
+User profile and order history
+Responsive and modern user interface
+Customer behavior tracking and analytics
+AI-powered recommendation engine
+Real-time analytics dashboard
+Admin dashboard with business intelligence metrics
+
+#### Technology Stack
+Frontend
+Next.js
+React
+TypeScript
+HTML5
+CSS3
+Tailwind CSS
+Backend
+Node.js
+Express.js
+RESTful APIs
+Database
+Microsoft SQL Server
+Real-Time Data Processing
+Apache Kafka
+Apache Spark Streaming
+Redis
+
+#### AI & Analytics
+Content-Based Filtering
+Collaborative Filtering
+Hybrid Recommendation System
+Customer Behavior Analytics
+Real-Time Event Processing
+Customer Behavior Tracking
+
+### The platform continuously captures and processes user interactions, including:
+
+User Registration and Login
+Product Views
+Product Searches
+Add to Cart
+Wishlist Actions
+Purchases
+Product Ratings
+Recommendation Clicks
+
+These events are streamed through Apache Kafka, processed in real time using Apache Spark Streaming, stored in SQL Server, and utilized by the recommendation engine to generate personalized product suggestions.
+
+### Analytics Dashboard
+
+The admin dashboard provides comprehensive business insights, including:
+
+Revenue Analytics
+Sales Trends
+Active Users
+Customer Behavior Analysis
+Product Performance
+Most Viewed Products
+Most Purchased Products
+Recommendation Performance
+Click-Through Rate (CTR)
+Conversion Rate
+Trending Products
+System Monitoring
+Real-Time Streaming Metrics
+Recommendation System
+
+### The platform includes an intelligent recommendation engine capable of:
+
+Personalized Product Recommendations
+Similar Products
+Customers Also Bought
+Recently Viewed Products
+Trending Products
+Cold-Start Recommendations
+Real-Time Recommendation Updates
+
+
+
