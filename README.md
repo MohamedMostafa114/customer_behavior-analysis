@@ -329,3 +329,33 @@ Displays complete product information, including images, description, pricing, r
 
 ![Product Details](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/seven.png)
 
+### Checkout Page
+Allows users to review their order before completing the purchase. The page displays the selected products, quantities, total price, shipping address, and payment method. After confirming the payment, the system processes the order, updates the inventory in real time, records the transaction, and displays a successful order confirmation.
+
+![Checkout Page](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/eight.png)
+
+### User Profile Page
+Provides a centralized dashboard for managing personal account information and shopping activities. Users can view their profile details, manage shipping addresses, maintain a wishlist, and track order history and delivery status. The page also allows users to add new addresses, set default shipping locations, and monitor previous purchases from a single interface.
+
+![User Profile Page](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/nine.png)
+
+### Admin Dashboard & Customer Behavior Analytics
+Provides administrators with a comprehensive dashboard to monitor platform performance and customer behavior in real time. The dashboard displays key business metrics such as registered users, total revenue, completed orders, average session time, and conversion rate. It also includes interactive analytics for top searched terms and the most viewed products, helping administrators understand customer interests, optimize inventory, and make data-driven business decisions.
+
+![Admin Dashboard](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/ten.png)
+
+![Customer Behavior Analytics](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/eleven.png)
+
+### Advanced Business Analytics Dashboard
+Provides advanced business intelligence and customer behavior analytics through interactive visualizations. The dashboard tracks customer event activity, top searched terms, product popularity, cart-to-purchase conversion rates, and revenue trends. These insights help administrators analyze user engagement, evaluate sales performance, monitor purchasing behavior, and make data-driven decisions to optimize the e-commerce platform.
+
+![Advanced Business Analytics](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/13s.png)
+
+![Revenue & Conversion Analytics](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/14f.png)
+
+### Order Management
+Provides a comprehensive order management interface that enables users and administrators to view and monitor order history. The page displays recent orders with their order ID, placement date, total amount, and current order status. It allows efficient tracking of completed purchases while providing a clear overview of transaction history and order progress.
+
+![Order Management](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/15f.png)
+
+![Recent Orders](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/16s.png)
