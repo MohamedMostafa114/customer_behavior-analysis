@@ -270,3 +270,15 @@ Real-Time Recommendation Updates
 The home page of the platform provides a modern shopping experience with a responsive interface, product search, category filtering, and interactive product cards. Users can browse products, view detailed information, add items to their cart, and access authentication features through a clean and intuitive design.
 
 ![Website Home Page](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/one.png)
+
+### User Registration
+
+New users can create an account by providing their personal information and credentials. The registration process includes form validation and securely stores user data in the database.
+
+![User Registration](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/two.png)
+
+### User Login
+
+Registered users can securely log in to access their personalized shopping experience, including their cart, order history, wishlist, and AI-powered product recommendations.
+
+![User Login](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/three.png)
