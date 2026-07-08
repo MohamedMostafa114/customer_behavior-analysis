@@ -260,6 +260,8 @@ Recently Viewed Products
 Trending Products
 Cold-Start Recommendations
 Real-Time Recommendation Updates
-![System Architecture](https://raw.githubusercontent.com/<USERNAME>/<REPOSITORY>/<BRANCH>/website/AR.png)
 
+## System Architecture
+
+![System Architecture](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/AR.png)
 
