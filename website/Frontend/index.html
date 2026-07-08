@@ -24,12 +24,36 @@
     <section class="card">
       <h1 class="page-title">Welcome to our E-Commerce store</h1>
       <div class="form-group">
-        <input id="search" class="form-input" placeholder="Search (UI only)" />
+        <input id="search" class="form-input" placeholder="Search products..." />
       </div>
       <div id="categories" class="row loading">Loading categories...</div>
     </section>
 
+    <section class="section" id="recommendationsContainer">
+      <!-- Recommendations sections -->
+      <div id="forYouSection" style="display:none; margin-bottom:40px;">
+        <h2 class="page-title" style="font-size:22px; margin-bottom:15px; border-bottom:1px solid var(--border); padding-bottom:8px;">Recommended For You</h2>
+        <div id="forYouRecs" class="courses-grid loading">Loading recommendations...</div>
+      </div>
+
+      <div style="margin-bottom:40px;">
+        <h2 class="page-title" style="font-size:22px; margin-bottom:15px; border-bottom:1px solid var(--border); padding-bottom:8px;">Trending Products</h2>
+        <div id="trendingRecs" class="courses-grid loading">Loading trending items...</div>
+      </div>
+
+      <!-- Real-Time Analytics Tabs Section -->
+      <div style="margin-bottom:40px;">
+        <div class="tabs-header" style="display:flex; gap:20px; border-bottom:1px solid var(--border); margin-bottom:18px; padding-bottom:8px; flex-wrap: wrap;">
+          <button class="tab-btn active" data-tab="best-selling" style="background:none; border:none; color:var(--accent); font-family:var(--font-head); font-size:18px; font-weight:700; cursor:pointer; padding:4px 4px; border-bottom:2px solid var(--accent); transition:all 0.2s; outline:none;">🔥 Best Sellers</button>
+          <button class="tab-btn" data-tab="most-viewed" style="background:none; border:none; color:var(--text3); font-family:var(--font-head); font-size:18px; font-weight:700; cursor:pointer; padding:4px 4px; border-bottom:2px solid transparent; transition:all 0.2s; outline:none;">👁️ Most Viewed</button>
+          <button class="tab-btn" data-tab="latest" style="background:none; border:none; color:var(--text3); font-family:var(--font-head); font-size:18px; font-weight:700; cursor:pointer; padding:4px 4px; border-bottom:2px solid transparent; transition:all 0.2s; outline:none;">✨ Latest Products</button>
+        </div>
+        <div id="tabbedProducts" class="courses-grid"></div>
+      </div>
+    </section>
+
     <section class="section">
+      <h2 class="page-title" style="font-size:22px; margin-bottom:15px; border-bottom:1px solid var(--border); padding-bottom:8px;">All Products</h2>
       <div id="products" class="courses-grid"></div>
     </section>
   </main>

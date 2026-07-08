@@ -1,1 +1,216 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Product Details</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="./css/style.css" /></head><body data-page="product"><nav><div class="nav-logo">Data<span>Flow</span> Shop</div><div class="nav-links"><a class="nav-btn" href="./index.html">Home</a><a class="nav-btn" href="./products.html">Products</a><a class="nav-cart-btn" href="./cart.html">Cart</a></div></nav><main class="container"><div id="product" class="card loading">Loading product...</div></main><script type="module" src="./js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+  <style>
+    .product-detail-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .gallery-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .main-img-container {
+      width: 100%;
+      height: 400px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .main-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .main-img-container img:hover {
+      transform: scale(1.05);
+    }
+    .thumb-container {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+    }
+    .thumb-img {
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius);
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+      background: var(--bg3);
+      transition: all 0.2s;
+    }
+    .thumb-img.active, .thumb-img:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .product-info-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .brand-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(0, 212, 255, 0.1);
+      color: var(--accent);
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .wishlist-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      border-radius: var(--radius);
+      padding: 10px 16px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .wishlist-btn:hover {
+      background: var(--red);
+      color: #fff;
+      border-color: transparent;
+    }
+    .wishlist-btn.active {
+      background: var(--red);
+      color: #fff;
+      border-color: transparent;
+    }
+    .action-row {
+      display: flex;
+      gap: 12px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .action-row .btn-primary, .action-row .btn-buy-now {
+      flex: 1;
+      text-align: center;
+      min-width: 130px;
+      padding: 12px 18px;
+      font-weight: 600;
+    }
+    .btn-buy-now {
+      background: var(--green);
+      color: #000;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn-buy-now:hover {
+      opacity: 0.9;
+    }
+    .info-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .info-block h3 {
+      font-family: var(--font-head);
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: var(--accent);
+    }
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .specs-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+    .specs-table td {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+    .specs-table td:first-child {
+      color: var(--text2);
+      font-weight: 500;
+      width: 150px;
+    }
+    .features-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .features-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .features-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    .rec-section {
+      margin-top: 40px;
+    }
+    .rec-section h2 {
+      font-family: var(--font-head);
+      font-size: 22px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+    .rec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    @media (max-width: 800px) {
+      .product-detail-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body data-page="product">
+  <nav>
+    <div class="nav-logo">Data<span>Flow</span> Shop</div>
+    <div class="nav-links">
+      <!-- Dynamically filled in main.js -->
+    </div>
+  </nav>
+
+  <main class="container">
+    <div id="product" class="loading">Loading product details...</div>
+
+    <!-- Recommendations sections -->
+    <section class="rec-section">
+      <h2>Frequently Bought Together</h2>
+      <div id="boughtTogether" class="rec-grid loading">Loading...</div>
+    </section>
+
+    <section class="rec-section">
+      <h2>Related Products</h2>
+      <div id="relatedProducts" class="rec-grid loading">Loading...</div>
+    </section>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

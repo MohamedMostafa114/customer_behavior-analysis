@@ -1,1 +1,63 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Checkout</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="./css/style.css" /></head><body data-page="checkout"><nav><div class="nav-logo">Data<span>Flow</span> Shop</div><div class="nav-links"><a class="nav-btn" href="./index.html">Home</a><a class="nav-cart-btn" href="./cart.html">Cart</a></div></nav><main class="container"><h1 class="page-title">Checkout</h1><div class="checkout-layout"><div class="section-card"><h3>Order Summary</h3><div id="checkoutItems"></div></div><div class="cart-summary"><div class="form-group"><label class="form-label">Payment method</label><select id="paymentMethod" class="form-input"><option value="1">Cash</option><option value="2">Card</option></select></div><button class="btn-primary" id="checkoutBtn">Submit Order</button><div id="checkoutMsg"></div></div></div></main><script type="module" src="./js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body data-page="checkout">
+  <nav>
+    <div class="nav-logo">Data<span>Flow</span> Shop</div>
+    <div class="nav-links">
+      <!-- Dynamically filled in main.js -->
+    </div>
+  </nav>
+  <main class="container">
+    <h1 class="page-title">Checkout</h1>
+    <div class="checkout-layout">
+      <!-- Left column: Order review and address selection -->
+      <div class="section-card">
+        <h3 style="font-family:var(--font-head);margin-bottom:15px;color:var(--accent);">Order Review</h3>
+        <div id="checkoutItems" class="loading">Loading items...</div>
+        
+        <hr style="border-color:var(--border);margin:20px 0;" />
+
+        <h3 style="font-family:var(--font-head);margin-bottom:15px;">Shipping Address</h3>
+        <div class="form-group">
+          <label class="form-label">Select Shipping Address</label>
+          <select id="checkoutAddress" class="form-input">
+            <!-- Dynamically populated -->
+          </select>
+          <div style="margin-top:8px;font-size:13px;">
+            <a href="./profile.html" style="color:var(--accent);text-decoration:underline;">+ Add / Manage Addresses in Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: Payment method & complete order -->
+      <div class="cart-summary">
+        <h3 style="font-family:var(--font-head);margin-bottom:15px;">Payment Details</h3>
+        
+        <div class="form-group">
+          <label class="form-label">Payment Method</label>
+          <select id="paymentMethod" class="form-input">
+            <!-- Dynamically populated -->
+          </select>
+        </div>
+
+        <div class="summary-total" style="margin:20px 0;font-size:20px;">
+          <span>Grand Total</span>
+          <span id="checkoutTotal">$0.00</span>
+        </div>
+
+        <button class="btn-primary" id="checkoutBtn" style="width:100%;padding:12px;">Submit Order</button>
+        <div id="checkoutMsg" style="margin-top:10px;"></div>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,1 +1,49 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Cart</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="./css/style.css" /></head><body data-page="cart"><nav><div class="nav-logo">Data<span>Flow</span> Shop</div><div class="nav-links"><a class="nav-btn" href="./index.html">Home</a><a class="nav-btn" href="./products.html">Products</a><a class="nav-cart-btn" href="./cart.html">Cart</a><a class="nav-btn" href="./checkout.html">Checkout</a></div></nav><main class="container"><div class="cart-layout"><div><h1 class="page-title">Your Cart</h1><div id="cartItems" class="loading">Loading cart...</div></div><div><div class="cart-summary"><div class="summary-total"><span>Total</span><span id="cartTotal">0</span></div><a class="btn-primary" href="./checkout.html" style="display:block;text-align:center;margin-top:10px;">Go to Checkout</a></div></div></div></main><script type="module" src="./js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body data-page="cart">
+  <nav>
+    <div class="nav-logo">Data<span>Flow</span> Shop</div>
+    <div class="nav-links">
+      <!-- Dynamically filled in main.js -->
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="cart-layout">
+      <!-- Left: Cart Items -->
+      <div>
+        <h1 class="page-title">Your Cart</h1>
+        <div id="cartItems" class="loading">Loading cart items...</div>
+      </div>
+
+      <!-- Right: Summary -->
+      <div>
+        <div class="cart-summary">
+          <h3 style="font-family:var(--font-head); margin-bottom:15px;">Summary</h3>
+          <div class="summary-total" style="margin-bottom: 20px;">
+            <span>Total</span>
+            <span id="cartTotal">$0.00</span>
+          </div>
+          <a class="btn-primary" href="./checkout.html" style="display:block; text-align:center; padding:12px;">Go to Checkout</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <section class="section" style="margin-top: 50px;">
+      <h2 class="page-title" style="font-size:22px; margin-bottom:15px; border-bottom:1px solid var(--border); padding-bottom:8px;">Trending Recommendations</h2>
+      <div id="trendingRecs" class="courses-grid loading">Loading recommendations...</div>
+    </section>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
