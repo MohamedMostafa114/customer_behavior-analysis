@@ -265,3 +265,8 @@ Real-Time Recommendation Updates
 
 ![System Architecture](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/AR.png)
 
+## Website Preview
+
+The home page of the platform provides a modern shopping experience with a responsive interface, product search, category filtering, and interactive product cards. Users can browse products, view detailed information, add items to their cart, and access authentication features through a clean and intuitive design.
+
+![Website Home Page](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/one.png)
