@@ -275,10 +275,10 @@ The home page of the platform provides a modern shopping experience with a respo
 
 New users can create an account by providing their personal information and credentials. The registration process includes form validation and securely stores user data in the database.
 
-![User Registration](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/two.png)
+![User Registration](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/three.png)
 
 ### User Login
 
 Registered users can securely log in to access their personalized shopping experience, including their cart, order history, wishlist, and AI-powered product recommendations.
 
-![User Login](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/three.png)
+![User Login](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/two.png)
