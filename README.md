@@ -282,3 +282,50 @@ New users can create an account by providing their personal information and cred
 Registered users can securely log in to access their personalized shopping experience, including their cart, order history, wishlist, and AI-powered product recommendations.
 
 ![User Login](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/two.png)
+
+## Product Catalog
+
+The Products page displays all available products in a clean, responsive grid layout. Each product card includes essential information such as the product name, brand, price, stock availability, and customer rating. Users can quickly browse products, view detailed information, and add items directly to their shopping cart.
+
+### Features
+
+- Responsive product grid
+- Product brand labels
+- Product ratings
+- Stock availability
+- Product pricing
+- View product details
+- Add to Cart functionality
+- Modern and user-friendly interface
+
+![Products Page](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/four.png)
+
+## Authenticated User Experience
+
+After logging in, the platform provides a personalized shopping experience with secure access to user-specific features. The navigation bar dynamically updates to display the authenticated user's profile, wishlist, order history, shopping cart, and administrative dashboard (for authorized users). This creates a seamless and realistic e-commerce experience.
+
+### Features
+
+- Secure user authentication
+- Personalized navigation bar
+- User profile management
+- Shopping cart access
+- Wishlist management
+- Order history
+- Admin dashboard access (role-based)
+- Logout functionality
+- Session management
+
+![Authenticated User Dashboard](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/five.png)
+
+### 📊 Admin Dashboard
+
+The Admin Dashboard provides real-time business analytics and customer behavior insights. It displays key performance indicators (KPIs), including total users, sales, orders, average session duration, and cart conversion rate. The dashboard also highlights the most searched terms and the most viewed products, helping administrators monitor platform performance and understand customer trends.
+
+![Admin Dashboard](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/s.png)
+
+### Product Details Page
+Displays complete product information, including images, description, pricing, rating, stock status, and purchase options. Users can select quantities, add products to their cart or wishlist, and purchase items directly.
+
+![Product Details](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/seven.png)
+
