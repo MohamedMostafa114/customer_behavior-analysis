@@ -293,7 +293,7 @@ Apache Spark Streaming consumes Kafka events and performs real-time data process
 - Customer activity monitoring
 - Recommendation performance
 
-![Data Pipeline](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/sk.png)
+![Data Pipeline](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/ks.png)
 
 ### Key Features
 - Real-time event streaming using Apache Kafka
