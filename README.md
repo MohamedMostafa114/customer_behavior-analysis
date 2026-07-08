@@ -180,7 +180,7 @@ Geographic reference data for addresses and regional analysis.
 
 A production-ready e-commerce platform designed to analyze customer behavior through real-time event processing, advanced analytics, and AI-powered product recommendations. The platform combines a complete online shopping experience with a scalable data analytics architecture to provide personalized recommendations and business insights.
 
-#### Features
+#### **Features**
 Secure user authentication (Sign Up, Login, Logout)
 Product catalog with detailed product pages
 Shopping cart and checkout system
@@ -192,7 +192,7 @@ AI-powered recommendation engine
 Real-time analytics dashboard
 Admin dashboard with business intelligence metrics
 
-#### Technology Stack
+#### **Technology Stack**
 Frontend
 Next.js
 React
