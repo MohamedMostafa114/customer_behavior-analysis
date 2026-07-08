@@ -265,6 +265,44 @@ Real-Time Recommendation Updates
 
 ![System Architecture](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/AR.png)
 
+## Real-Time Analytics with Apache Kafka & Apache Spark
+
+This project uses **Apache Kafka** and **Apache Spark Streaming** to process customer interactions in real time. Every user action on the e-commerce platform is captured as an event, streamed through Kafka, analyzed by Spark Streaming, and stored in **SQL Server** for visualization in the admin dashboard.
+
+### Apache Kafka
+Apache Kafka serves as the event streaming platform, enabling reliable and scalable communication between the website and the analytics engine.
+
+**Events Captured**
+- User registration and login
+- Product searches
+- Product views
+- Add to cart / Remove from cart
+- Wishlist actions
+- Product ratings
+- Purchases
+- Recommendation clicks
+
+### Apache Spark Streaming
+Apache Spark Streaming consumes Kafka events and performs real-time data processing to generate business insights.
+
+**Analytics Generated**
+- Most viewed products
+- Top searched keywords
+- Total sales and orders
+- Cart conversion rate
+- Customer activity monitoring
+- Recommendation performance
+
+![Data Pipeline](https://raw.githubusercontent.com/MohamedMostafa114/customer_behavior-analysis/main/website/sk.png)
+
+### Key Features
+- Real-time event streaming using Apache Kafka
+- Distributed stream processing with Apache Spark Streaming
+- SQL Server integration for data storage
+- Live analytics dashboard
+- Event-driven and scalable architecture
+- Customer behavior tracking and business intelligence
+  
 ## Website Preview
 
 The home page of the platform provides a modern shopping experience with a responsive interface, product search, category filtering, and interactive product cards. Users can browse products, view detailed information, add items to their cart, and access authentication features through a clean and intuitive design.
